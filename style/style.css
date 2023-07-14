@@ -1,0 +1,257 @@
+body{
+    margin: 0;
+	font-weight: 300;
+	font-size: 15px;
+    background-color: white;
+    /*background-color: #f7f7f7;*/
+    font-family: montserrat;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main_block{
+    max-width: 100%;
+    min-width: 1350px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url(../img/img-bg3.png);
+    background-position: center;
+}
+
+.menu{
+    margin: 0 auto;
+    min-width: 1350px;
+    max-width: 100%;
+    background-color: #2D2F33;
+    border-top: 2px solid #f47f28;
+    border-bottom: 2px solid #f47f28;
+    box-shadow:0 0 10px #f47f28;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inner_menu{
+    width: 1050px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+}
+
+.inner_menu :first-child{
+    margin-left: 50px;
+}
+.inner_menu :last-child{
+    margin-right: 0px;
+}
+
+.user_box{
+    display: flex;
+    flex-direction: row;
+}
+
+.log_box{
+    background-color: white;
+    padding: 12px 18px;
+    border: 1px solid #f47f28;
+    border-radius: 8px;
+    box-shadow:0 0 10px #f47f28;
+    width: 78px;
+    height: 20px;
+    margin-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.log_link{
+    margin: 0px; 
+    text-shadow: none; 
+    color: #2D2F33;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.3s linear;
+}
+
+.log_link:hover{
+    color: #f47f28;
+}
+
+.nav_link{
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s linear;
+    margin-right: 60px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.nav_link:hover{
+    color: #f47f28;
+}
+
+.nav_user{
+    height: 40px;
+    text-decoration: none;
+    color: #f47f28;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: 0.3s linear;
+    margin-right: 185px;
+    margin-top: -10px;
+    padding-top: 25px;
+}
+
+.content{
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.inner_content{
+    width: 1350px;
+    margin: 0 auto;
+    background-color: #fff;
+    backdrop-filter: blur(5px);
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 25px black;
+}
+
+.input_block{
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.input_block2{
+    height: 30px;
+    width: 450px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.table_style{
+    margin: 0 auto;
+}
+
+.submit1{
+    height: 40px;
+    width: 250px;
+    border: 1px solid #f47f28;
+    border-radius: 8px;
+    box-shadow:0 0 10px #f47f28;
+    background-color: #2D2F33;
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#block-fbu{
+    margin: 0 auto;
+    min-width: 1350px;
+    max-width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: url(../img/img-bg4.png);
+    background-position: top;
+    background-size: cover;
+    text-shadow: 3px 3px 3px #8a8a8a;
+}
+
+.inner-block-fbu{
+    margin: 0 auto; 
+    width: 800px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.black-min{
+    color: black;
+    font-size: 34px;
+    font-weight: 200;
+}
+
+.red-max{
+    color: #f47f28;
+    font-size: 40px;
+}
+
+.label-style{
+    margin-top:4px;
+    font-weight: 600;
+}
+
+legend{
+    font-weight: 500;
+}
+
+.txt_area_style{
+   width: 300px;
+    height: 100px;
+}
+
+fieldset{
+    border-radius: 15px;
+}
+
+.tablesorter-default th,
+.tablesorter-default thead td {
+	background-color: #2D2F33;
+    color: white;
+    font-weight: 500;
+}
+
+.tablesorter-default tfoot th,
+.tablesorter-default tfoot td {
+	border: 0;
+}
+
+.tablesorter-default .header,
+.tablesorter-default .tablesorter-header {
+	background-image: url(../img/white-unsorted.gif);
+	background-position: center right;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	white-space: normal;
+	padding: 4px 20px 4px 4px;
+}
+
+.tablesorter-default thead .headerSortUp,
+.tablesorter-default thead .tablesorter-headerSortUp,
+.tablesorter-default thead .tablesorter-headerAsc {
+	background-image: url(../img/white-asc.gif);
+	border-bottom: #000 2px solid;
+}
+
+.tablesorter-default thead .headerSortDown,
+.tablesorter-default thead .tablesorter-headerSortDown,
+.tablesorter-default thead .tablesorter-headerDesc {
+	background-image: url(../img/white-desc.gif);
+	border-bottom: #000 2px solid;
+}
+
+.tablesorter-default thead .sorter-false {
+	background-image: none;
+	cursor: default;
+	padding: 4px;
+}

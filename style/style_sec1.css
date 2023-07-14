@@ -1,0 +1,70 @@
+table{
+    box-shadow:0 0 25px #8a8a8a;
+}
+
+table  th {
+	font-weight: bold;
+	padding: 5px;
+	background: #2D2F33;
+	border: 1px solid #dddddd;
+    width: 140px;
+    text-align: center;
+    height: 45px;
+}
+
+thead {
+  position: sticky;
+  top: 0px;
+}
+
+table  th:first-child{
+    width: 80px;
+}
+
+table td {
+	padding: 5px 10px;
+	border: 1px solid #eee;
+	text-align: left;
+}
+table tbody tr:nth-child(odd) {
+	background: #fff; 
+}
+table tbody tr:nth-child(even) {
+	background: #F7F7F7;
+}
+
+.block-add{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 430px 430px 430px;
+    margin-bottom: 25px;
+}
+
+.inner-block-add{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    vertical-align: middle;
+    grid-gap: 16px;
+    padding-top: 10px;
+}
+
+.grid2{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 670px 670px;
+    margin-bottom: 25px;
+}
+
+.grid3{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 444px 443px 443px;
+    margin-bottom: 25px;
+}
+
+.grid4{
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 40px 0.5fr;
+    
+}

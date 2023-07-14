@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows1251">
+    <title><?php echo $title; ?></title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_sec0.css">
+    <link rel="stylesheet" href="style/style_sec1.css">
+    <link rel="stylesheet" href="style/styleLog.css">
+    <link href="style/uicons-bold-rounded.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    </head>
+        <body>
+            <script src="./js/jquery-3.6.1.js"></script>
+            
+            <div class="main_block">
+                
+                <div id="block-fbu">
+                    <div class="inner-block-fbu">
+                        <h1><span class="black-min" >Федеральное бюджетное учреждение</span>
+                            <br>
+                            <span id="log_clr" class="red-max">Реестр</span>
+                            <br>
+                            <span class="black-min">Администрация Обского бассейна<br>внутренних водных путей</span>
+                        </h1>
+                        
+                    </div><!-- END DIV INNER-BLOCK-FBU -->
+                </div><!-- END DIV BLOCK-FBU -->
+                
+                <div class="menu" id="navbar">
+
+                    <div class="user_box">
+                    <?
+                    $host='localhost';
+                    $database='reestr';
+                    $user='root';
+                    $password='';
+                    $link = mysqli_connect($host, $user, $password, $database);
+                    
+                    $log=$_SESSION['login'];
+                    $query="SELECT `last_name`,`name` FROM `users` WHERE `login`='$log'";
+                    $result = mysqli_query($link, $query); 
+                    $row = mysqli_fetch_assoc($result);
+                    $fio = $row['last_name'] . ' ' . $row['name'] . ' ' . $row['middle_name'];
+
+                        if ($_SESSION['name'] == 'admin'){
+                            echo '<div id="nav_usr1" class="nav_user" style="margin-right:50px; margin-left:10px;">Сис.админ<br>' . $fio . '</div>';
+
+                            echo '<a class="nav_link" style="margin-right:0px;" href="?id=9">Личный кабинет</a> ';
+                        }
+                        else if ($_SESSION['name'] == 'user'){
+                            echo '<div id="nav_usr2" style="margin-right:40px;" class="nav_user">Пользователь<br>' . $fio . '</div>';
+                        }
+                    ?>
+                    </div><!-- END DIV USER BOX -->
+                        <div class="inner_menu">
+                            <?
+                                foreach ($GLOBALS['arrContent'] as $key=>$value) {
+                                echo '<a class="nav_link" href="?'.GET_ID_SECTION.'='.$key.'">'.$value.'</a> ';                             
+                                }                          
+                            ?>
+                        </div><!-- END DIV INNER MENU -->
+
+                        <div class="log_box">
+                            <?
+                            if ($_SESSION['name'] == ''){
+                                echo '<a class="log_link" href="?id=8">Войти</a>';
+                            }
+                            else{
+                                echo '<a onClick="return window.confirm(\'Вы уверены, что хотите выйти из аккаунта?\');" 
+                                class="log_link" href="./sections/exit.php">Выйти</a>';
+                            }
+                            ?>
+                        </div><!-- END DIV LOG BOX -->
+
+                </div><!-- END DIV MENU -->
+                
+                <div class="content">
+                    <?php
+                        include($fileContent);
+                    ?>
+                </div><!-- END DIV CONTENT -->
+            </div><!-- END DIV MAIN BLOCK -->
+        </body>
+    </html>
