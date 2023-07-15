@@ -43,7 +43,13 @@
                 </div><br/><!-- END DIV BTN BOX -->
             </div><!-- END DIV FORM BOX -->
 
-        
+            <?  
+            if ($_SESSION['name'] == ''){
+                echo "<script>
+                        document.getElementById('form_box').style.display='none';  
+                    </script>";    
+            }
+            ?>
 
             <h2>Реестр</h2>
         </div>
