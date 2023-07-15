@@ -11,7 +11,41 @@
         <script src="./js/validate_reestr.js"></script>
         
         <div class="inner_content">
-            
+
+            <div id="form_box">
+                <div class="btn_box">
+                    <div id="btn_add">
+                        <button onclick="document.getElementById('form_add').style.display='block';
+                        document.getElementById('form_edit').style.display='none';
+                        document.getElementById('form_delete').style.display='none';
+                        document.getElementById('btn_add').style.display='none';
+                        document.getElementById('btn_edit').style.display='block';
+                        document.getElementById('btn_delete').style.display='block';" class="submit1" >Добавить запись</button>
+                    </div>
+
+                    <div id="btn_edit">
+                        <button onclick="document.getElementById('form_add').style.display='none';
+                        document.getElementById('form_edit').style.display='block';
+                        document.getElementById('form_delete').style.display='none';
+                        document.getElementById('btn_add').style.display='block';
+                        document.getElementById('btn_edit').style.display='none';
+                        document.getElementById('btn_delete').style.display='block';" class="submit1" >Редактировать запись</button>
+                    </div>
+
+                    <div id="btn_delete">
+                        <button onclick="document.getElementById('form_add').style.display='none';
+                        document.getElementById('form_edit').style.display='none';
+                        document.getElementById('form_delete').style.display='block';
+                        document.getElementById('btn_add').style.display='block';
+                        document.getElementById('btn_edit').style.display='block';
+                        document.getElementById('btn_delete').style.display='none';" class="submit1" >Удалить запись</button>
+                    </div>
+                </div><br/><!-- END DIV BTN BOX -->
+            </div><!-- END DIV FORM BOX -->
+
+        
+
+            <h2>Реестр</h2>
         </div>
 
         <div class="table_box">
