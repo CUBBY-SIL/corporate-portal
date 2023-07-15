@@ -41,6 +41,15 @@ table tbody tr:nth-child(even) {
     max-height: 85vh; 
     overflow-y: scroll;
     background-color: #fff;
+    position: relative;
+    z-index: 9999;
+}
+
+.btn_box{
+    margin:0 auto;
+    display: flex; 
+    justify-content: space-around; 
+    margin-top:25px;
 }
 
 .block-add{
