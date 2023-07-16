@@ -10,6 +10,7 @@
         <script src="./js/jquery.tablesorter.js"></script>
         <script src="./js/validate_reestr.js"></script>
         <script src="./js/show_hide_form.js"></script>
+        <script src="./js/fill_select/fill_kosgu.js"></script>
         
         <div class="inner_content">
 
@@ -107,34 +108,11 @@
                                 </div>
                                 <div id="reest-add-select-kosgu" style="display: none;" class="inner-block-add">
                                     <label for="reest-add-kosgu" class="label-style" style="text-align: left;">КОСГУ:</label>
-                                    <select class="input_block2" id="sel_kosgu" name="sel_kosgu">
-                                        <option value="">Выберите КОСГУ</option>
-                                    </select>
-                                                    
-                                <script>
-                                // Загрузка данных из базы данных и заполнение выпадающего списка
-                                $(document).ready(function() {
-                                    $.ajax({
-                                        url: 'KOSGU.php',
-                                        method: 'GET',
-                                        dataType: 'json',
-                                        success: function(data) {
-                                            var dropdown = $('#sel_kosgu');
-                                            dropdown.empty();
-
-                                            $.each(data, function(index, value) {
-                                                dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                            });
-                                        },
-                                        error: function(xhr, status, error) {
-                                        console.log(xhr.responseText);
-                                        }
-                                    });
-                                });
-                                </script>
-
+                                    <select class="input_block2" id="sel_kosgu" name="sel_kosgu"></select>
                                 </div>
+
                                 <br>
+
                                 <div id="reest-add-check-sel-kosgu">
                                     <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-kosgu" 
                                     onclick="document.getElementById('reest-add-input-kosgu').style.display='none';
