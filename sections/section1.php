@@ -119,16 +119,20 @@
                                 <br>
 
                                 <div id="reest-add-check-sel-kosgu">
-                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-kosgu" 
-                                    onclick="document.getElementById('reest-add-input-kosgu').style.display='none';
+                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                    <input type="checkbox" id="reest-add-check-select-kosgu-checkbox" 
+                                    onclick="$('#reest-add-check-input-kosgu-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-kosgu').style.display='none';
                                             document.getElementById('reest-add-select-kosgu').style.display='grid';
                                             document.getElementById('reest-add-check-sel-kosgu').style.display='none';
                                             document.getElementById('reest-add-check-add-kosgu').style.display='block';">
                                 </div>
                                     
                                 <div id="reest-add-check-add-kosgu" style="display: none;">
-                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="reest-add-check-select-kosgu" 
-                                    onclick="document.getElementById('reest-add-input-kosgu').style.display='grid'; 
+                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label>
+                                    <input type="checkbox" id="reest-add-check-input-kosgu-checkbox" 
+                                    onclick="$('#reest-add-check-select-kosgu-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-kosgu').style.display='grid'; 
                                             document.getElementById('reest-add-select-kosgu').style.display='none';
                                             document.getElementById('reest-add-check-sel-kosgu').style.display='block';
                                             document.getElementById('reest-add-check-add-kosgu').style.display='none';">
@@ -151,16 +155,20 @@
                                 <br>
 
                                 <div id="reest-add-check-sel-nfin">
-                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-nfin" 
-                                    onclick="document.getElementById('reest-add-input-nfin').style.display='none';
+                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                    <input type="checkbox" id="reest-add-check-select-nfin-checkbox" 
+                                    onclick="$('#reest-add-check-input-nfin-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-nfin').style.display='none';
                                             document.getElementById('reest-add-select-nfin').style.display='grid';
                                             document.getElementById('reest-add-check-sel-nfin').style.display='none';
                                             document.getElementById('reest-add-check-add-nfin').style.display='block';">
                                 </div>
                                 
                                 <div id="reest-add-check-add-nfin" style="display: none;">
-                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="reest-add-check-select-nfin" 
-                                    onclick="document.getElementById('reest-add-input-nfin').style.display='grid';
+                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label>
+                                    <input type="checkbox" id="reest-add-check-input-nfin-checkbox" 
+                                    onclick="$('#reest-add-check-select-nfin-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-nfin').style.display='grid';
                                             document.getElementById('reest-add-select-nfin').style.display='none';
                                             document.getElementById('reest-add-check-sel-nfin').style.display='block';
                                             document.getElementById('reest-add-check-add-nfin').style.display='none';">
@@ -187,16 +195,20 @@
                                 <br>
 
                                 <div id="reest-add-check-sel-office">
-                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-office" 
-                                    onclick="document.getElementById('reest-add-input-office').style.display='none';
+                                    <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                    <input type="checkbox" id="reest-add-check-select-office-checkbox" 
+                                    onclick="$('#reest-add-check-input-office-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-office').style.display='none';
                                             document.getElementById('reest-add-select-office').style.display='grid';
                                             document.getElementById('reest-add-check-sel-office').style.display='none';
                                             document.getElementById('reest-add-check-add-office').style.display='block';">
                                 </div>
                                     
                                 <div id="reest-add-check-add-office" style="display: none;">
-                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="reest-add-check-select-office" 
-                                    onclick="document.getElementById('reest-add-input-office').style.display='grid';
+                                    <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label>
+                                    <input type="checkbox" id="reest-add-check-input-office-checkbox" 
+                                    onclick="$('#reest-add-check-select-office-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-office').style.display='grid';
                                             document.getElementById('reest-add-select-office').style.display='none';
                                             document.getElementById('reest-add-check-sel-office').style.display='block';
                                             document.getElementById('reest-add-check-add-office').style.display='none';">
@@ -222,11 +234,9 @@
 
                                 <div id="reest-add-check-sel-kvr">
                                     <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label>
-                                    <input type="checkbox"  id="reest-add-check-select-kvr" 
-                                    onclick="
-                                        $('#reest-add-check-add-kvr').prop('checked', false);
-                                        
-                                        document.getElementById('reest-add-input-kvr').style.display='none';
+                                    <input type="checkbox"  id="reest-add-check-select-kvr-checkbox" 
+                                    onclick="$('#reest-add-check-add-kvr-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-kvr').style.display='none';
                                             document.getElementById('reest-add-select-kvr').style.display='grid';
                                             document.getElementById('reest-add-check-sel-kvr').style.display='none';
                                             document.getElementById('reest-add-check-add-kvr').style.display='block';
@@ -235,11 +245,9 @@
                                     
                                 <div id="reest-add-check-add-kvr" style="display: none;">
                                     <label for="reest-add-check-adding" class="label-style">Добавить новое значение</label>
-                                    <input type="checkbox"  id="reest-add-check-add-kvr" 
-                                    onclick="
-                                        $('#reest-add-check-select-kvr').prop('checked', false);
-                                        
-                                        document.getElementById('reest-add-input-kvr').style.display='grid';
+                                    <input type="checkbox"  id="reest-add-check-add-kvr-checkbox" 
+                                    onclick="$('#reest-add-check-select-kvr-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-kvr').style.display='grid';
                                             document.getElementById('reest-add-select-kvr').style.display='none';
                                             document.getElementById('reest-add-check-sel-kvr').style.display='block';
                                             document.getElementById('reest-add-check-add-kvr').style.display='none';
@@ -258,7 +266,7 @@
                                     <input class="input_block2" type="text"  name="reest-add-message_name" id="reest-add-message_name" placeholder="Наименование"/>
                                     
                                     <label for="reest-add-messag" class="label-style" style="text-align: left;">Дата:</label>
-                                    <input class="input_block2" type="date"  name="reest-add-message_date" id="reest-add-message_date" placeholder="Дата"/>
+                                    <input class="input_block2" type="date" name="reest-add-message_date" id="reest-add-message_date" placeholder="Дата"/>
                                     
                                 </div>
                                 
@@ -267,22 +275,26 @@
                                     <select class="input_block2" id="reest-add-sel_letter" name="reest-add-sel_letter"></select>
                                     
                                     <label for="reest-add-messag" class="label-style" style="text-align: left;">Дата:</label>
-                                    <input class="input_block2" type="date"  name="reest-add-message_date2" id="reest-add-message_date" placeholder="Дата"/>
+                                    <input class="input_block2" type="date"  name="reest-add-message_date2" id="reest-add-message_date2" placeholder="Дата"/>
                                 </div>
 
                                 <br>
 
                                 <div id="reest-add-check-sel-message">
-                                    <label for="reest-add-check-select-message" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-message" 
-                                    onclick="document.getElementById('reest-add-input-message').style.display='none';
+                                    <label for="reest-add-check-select-message" class="label-style">Выбрать из имеющихся</label>
+                                    <input type="checkbox" id="reest-add-check-select-message-checkbox" 
+                                    onclick="$('#reest-add-check-input-message-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-message').style.display='none';
                                             document.getElementById('reest-add-select-message').style.display='grid';
                                             document.getElementById('reest-add-check-sel-message').style.display='none';
                                             document.getElementById('reest-add-check-add-message').style.display='block';">
                                 </div>
                                     
                                 <div id="reest-add-check-add-message" style="display: none;">
-                                    <label for="reest-add-check-adding-message" class="label-style">Добавить новое значение</label><input type="checkbox" id="reest-add-check-select-message" 
-                                    onclick="document.getElementById('reest-add-input-message').style.display='grid'; 
+                                    <label for="reest-add-check-adding-message" class="label-style">Добавить новое значение</label>
+                                    <input type="checkbox" id="reest-add-check-input-message-checkbox" 
+                                    onclick="$('#reest-add-check-select-message-checkbox').prop('checked', false);
+                                            document.getElementById('reest-add-input-message').style.display='grid'; 
                                             document.getElementById('reest-add-select-message').style.display='none'; 
                                             document.getElementById('reest-add-check-sel-message').style.display='block'; 
                                             document.getElementById('reest-add-check-add-message').style.display='none';">
