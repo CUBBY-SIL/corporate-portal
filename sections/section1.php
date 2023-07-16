@@ -9,43 +9,22 @@
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
         <script src="./js/validate_reestr.js"></script>
+        <script src="./js/show_hide_form.js"></script>
         
         <div class="inner_content">
 
             <div id="form_box">
                 <div class="btn_box">
                     <div id="btn_add">
-                        <button onclick="document.getElementById('btn_add').style.display='none';
-                        document.getElementById('btn_edit').style.display='block';
-                        document.getElementById('btn_delete').style.display='block';
-                        document.getElementById('form_add_edit').style.display='block';
-                        document.getElementById('h_add').style.display='block';
-                        document.getElementById('h_edit').style.display='none';
-                        document.getElementById('edit_num_row').style.display='none';
-                        document.getElementById('btn_sub_add').style.display='block';
-                        document.getElementById('btn_sub_edit').style.display='none';
-                        document.getElementById('form_delete').style.display='none';" class="submit1" >Добавить запись</button>
+                        <button id="btn_ad" class="submit1" >Добавить запись</button>
                     </div>
 
                     <div id="btn_edit">
-                        <button onclick="document.getElementById('btn_edit').style.display='none';
-                        document.getElementById('btn_add').style.display='block';
-                        document.getElementById('btn_delete').style.display='block';
-                        document.getElementById('form_add_edit').style.display='block';
-                        document.getElementById('h_edit').style.display='block';
-                        document.getElementById('h_add').style.display='none';
-                        document.getElementById('edit_num_row').style.display='grid';
-                        document.getElementById('btn_sub_edit').style.display='block';
-                        document.getElementById('btn_sub_add').style.display='none';
-                        document.getElementById('form_delete').style.display='none';" class="submit1" >Редактировать запись</button>
+                        <button id="btn_ed" class="submit1" >Редактировать запись</button>
                     </div>
 
                     <div id="btn_delete">
-                        <button onclick="document.getElementById('btn_delete').style.display='none';
-                        document.getElementById('btn_add').style.display='block';
-                        document.getElementById('btn_edit').style.display='block';
-                        document.getElementById('form_add_edit').style.display='none';
-                        document.getElementById('form_delete').style.display='block';" class="submit1" >Удалить запись</button>
+                        <button id="btn_del" class="submit1" >Удалить запись</button>
                     </div>
                 </div><br/><!-- END DIV BTN BOX -->
 
