@@ -13,6 +13,7 @@
         <script src="./js/fill_select/fill_kosgu.js"></script>
         <script src="./js/fill_select/fill_finance.js"></script>
         <script src="./js/fill_select/fill_branch.js"></script>
+        <script src="./js/fill_select/fill_kvr.js"></script>
         
         <div class="inner_content">
 
@@ -212,12 +213,11 @@
                                 </div>
                                 <div id="reest-add-select-kvr" style="display: none;" class="inner-block-add">
                                     <label for="reest-add-kvr" class="label-style">КВР:</label>
-                                    <select id="reest-add-sel_kvr" name="reest-add-sel_kvr" class="input_block2">
-                                        
-                                    </select>
-
+                                    <select id="reest-add-sel_kvr" name="reest-add-sel_kvr" class="input_block2"></select>
                                 </div>
+
                                 <br>
+
                                 <div id="reest-add-check-sel-kvr">
                                     <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label>
                                     <input type="checkbox"  id="reest-add-check-select-kvr" 
@@ -243,33 +243,7 @@
                                             document.getElementById('reest-add-check-add-kvr').style.display='none';
                                             ">
                                 </div>
-                                <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'KVR.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#reest-add-sel_kvr');
-                                                dropdown.empty();
-                                                
-                                                var fixOpt = '';
-                                                fixOpt = '<option disabled selected value="0">' + 'Выберите КВР' + '</option>' 
-                                                
-                                                dropdown.append(fixOpt);
 
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    }); 
-                                </script>
-                                
                             </fieldset>
                         </div>
     <!------------------------------------------------------------------------------------------------------------------------------------------------------->   
