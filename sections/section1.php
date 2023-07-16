@@ -12,6 +12,7 @@
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_select/fill_kosgu.js"></script>
         <script src="./js/fill_select/fill_finance.js"></script>
+        <script src="./js/fill_select/fill_branch.js"></script>
         
         <div class="inner_content">
 
@@ -177,12 +178,11 @@
                                 </div>
                                 <div id="reest-add-select-office" style="display: none;" class="inner-block-add">
                                     <label for="reest-add-office" class="label-style" style="text-align: left;">Филиал:</label>
-                                    <select id="sel_branch" name="sel_branch" class="input_block2">
-                                        <option>Выберите филиал</option>
-                                    </select>
-
+                                    <select id="sel_branch" name="sel_branch" class="input_block2"></select>
                                 </div>
+
                                 <br>
+
                                 <div id="reest-add-check-sel-office">
                                     <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-office" 
                                     onclick="document.getElementById('reest-add-input-office').style.display='none';
@@ -198,27 +198,6 @@
                                             document.getElementById('reest-add-check-sel-office').style.display='block';
                                             document.getElementById('reest-add-check-add-office').style.display='none';">
                                 </div>
-                                <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'BRANCH.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#sel_branch');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>  
                             </fieldset>
                         </div>
     <!----------------------------------------------------------------------------------------------------------------------------------------------------->
