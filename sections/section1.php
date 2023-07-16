@@ -11,6 +11,7 @@
         <script src="./js/validate_reestr.js"></script>
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_select/fill_kosgu.js"></script>
+        <script src="./js/fill_select/fill_finance.js"></script>
         
         <div class="inner_content">
 
@@ -140,34 +141,11 @@
                                 </div>
                                 <div id="reest-add-select-nfin" style="display: none;" class="inner-block-add">
                                     <label for="reest-add-nfin" class="label-style" style="margin-top: -5px;">Источник финансирования:</label>
-                                    <select class="input_block2" name="sel_fin" id="sel_fin">
-                                        <option value="">Выберите источник финансирования</option>
-                                    </select>
-
-                                    <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'FINANCE.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#sel_fin');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>
-
+                                    <select class="input_block2" name="sel_fin" id="sel_fin"></select>
                                 </div>
+
                                 <br>
+
                                 <div id="reest-add-check-sel-nfin">
                                     <label for="reest-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-nfin" 
                                     onclick="document.getElementById('reest-add-input-nfin').style.display='none';
