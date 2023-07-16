@@ -1,0 +1,41 @@
+$( document ).ready(function() {
+    $("#btn_ad").click(
+        function(){
+            document.getElementById('btn_add').style.display='none';
+            document.getElementById('btn_edit').style.display='block';
+            document.getElementById('btn_delete').style.display='block';
+            document.getElementById('form_add_edit').style.display='block';
+            document.getElementById('h_add').style.display='block';
+            document.getElementById('h_edit').style.display='none';
+            document.getElementById('edit_num_row').style.display='none';
+            document.getElementById('btn_sub_add').style.display='block';
+            document.getElementById('btn_sub_edit').style.display='none';
+            document.getElementById('form_delete').style.display='none'; 
+        }
+    );
+
+    $("#btn_ed").click(
+        function(){
+            document.getElementById('btn_edit').style.display='none';
+            document.getElementById('btn_add').style.display='block';
+            document.getElementById('btn_delete').style.display='block';
+            document.getElementById('form_add_edit').style.display='block';
+            document.getElementById('h_edit').style.display='block';
+            document.getElementById('h_add').style.display='none';
+            document.getElementById('edit_num_row').style.display='grid';
+            document.getElementById('btn_sub_edit').style.display='block';
+            document.getElementById('btn_sub_add').style.display='none';
+            document.getElementById('form_delete').style.display='none'; 
+        }
+    );
+
+    $("#btn_del").click(
+        function(){
+            document.getElementById('btn_delete').style.display='none';
+            document.getElementById('btn_add').style.display='block';
+            document.getElementById('btn_edit').style.display='block';
+            document.getElementById('form_add_edit').style.display='none';
+            document.getElementById('form_delete').style.display='block'; 
+        }
+    );
+  });
