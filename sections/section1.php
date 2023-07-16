@@ -8,7 +8,7 @@
         
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
-        <script src="./js/validate_reestr.js"></script>
+        <script src="./js/validate/validate_reestr.js"></script>
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_select/fill_kosgu.js"></script>
         <script src="./js/fill_select/fill_finance.js"></script>
@@ -41,7 +41,7 @@
 
                     <br/>
 
-                    <form  name="form_add_reestr" id="form_add_reestr" onsubmit="return validate_form_add_reestr( );" >
+                    <form  name="form_add_reestr" id="form_add_reestr">
 
                         <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
                             <label for="reestr-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
@@ -309,7 +309,11 @@
                             </div>
                         </div><!-- END DIV BLOCK ADD -->
 
-                        <input class="submit1" id="btn_sub_add" style="margin:0 auto; margin-top:25px; display:none;"  type="button" name="submit1" value="Добавить запись"/>
+                        <input class="submit1" id="btn_sub_add" 
+                        style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                        name="submit1" value="Добавить запись"
+                        onclick="return validate_form_add_reestr( );"
+                        />
                         <input class="submit1" id="btn_sub_edit" style="margin:0 auto; margin-top:25px; display:none;"  type="button" name="submit1" value="Редактировать запись"/>
 
                     </form><br/>
