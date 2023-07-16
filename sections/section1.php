@@ -14,6 +14,7 @@
         <script src="./js/fill_select/fill_finance.js"></script>
         <script src="./js/fill_select/fill_branch.js"></script>
         <script src="./js/fill_select/fill_kvr.js"></script>
+        <script src="./js/fill_select/fill_letter.js"></script>
         
         <div class="inner_content">
 
@@ -262,44 +263,14 @@
                                 
                                 <div id="reest-add-select-message" style="display: none;" class="inner-block-add">
                                     <label for="reest-add-message" class="label-style" style="text-align: left;">Наименование:</label>                  
-                                    <select class="input_block2" id="reest-add-sel_letter" name="reest-add-sel_letter">
-                                        <option value="">Выберите наименование</option>
-                                    </select>
+                                    <select class="input_block2" id="reest-add-sel_letter" name="reest-add-sel_letter"></select>
                                     
                                     <label for="reest-add-messag" class="label-style" style="text-align: left;">Дата:</label>
                                     <input class="input_block2" type="date"  name="reest-add-message_date2" id="reest-add-message_date" placeholder="Дата"/>
-                                    
-                                                    
-                                <script>
-                                // Загрузка данных из базы данных и заполнение выпадающего списка
-                                $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'LETTER.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#reest-add-sel_letter');
-                                                dropdown.empty();
-                                                
-                                                var fixOptLett = '';
-                                                fixOptLett = '<option disabled selected value="0">' + 'Выберите Письмо согласования' + '</option>' 
-                                                
-                                                dropdown.append(fixOptLett);
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });                               
-                                </script>
-
-
                                 </div>
+
                                 <br>
+
                                 <div id="reest-add-check-sel-message">
                                     <label for="reest-add-check-select-message" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="reest-add-check-select-message" 
                                     onclick="document.getElementById('reest-add-input-message').style.display='none';
