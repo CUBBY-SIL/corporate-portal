@@ -67,15 +67,12 @@
                             <fieldset>
                                 <legend>Контрагент</legend>
                                 <div >
-                                <div id="reest-add-input-partner_name" class="inner-block-add">
-                                    <label for="reest-add-partner_name" class="label-style" style="text-align: left;">Наименование:</label>
-                                    <input class="input_block2" type="text"  name="reest-add-partner_name" id="reest-add-partner_name" placeholder="Наименование"/>
-                                </div>
-                                
-                                <div id="reest-add-input-partner_inn" class="inner-block-add">
-                                    <label for="reest-add-partner_inn" class="label-style" style="text-align: left;">ИНН:</label>
-                                    <input class="input_block2" type="text"  name="reest-add-partner_inn" id="reest-add-partner_inn" placeholder="ИНН"/>
-                                </div>
+                                    <div id="reest-add-input-partner_name" class="inner-block-add">
+                                        <label for="reest-add-partner_name" class="label-style" style="text-align: left;">Наименование:</label>
+                                        <input class="input_block2" type="text"  name="reest-add-partner_name" id="reest-add-partner_name" placeholder="Наименование"/>
+                                        <label for="reest-add-partner_inn" class="label-style" style="text-align: left;">ИНН:</label>
+                                        <input class="input_block2" type="text"  name="reest-add-partner_inn" id="reest-add-partner_inn" placeholder="ИНН"/>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>
@@ -85,21 +82,12 @@
                                 
                                 <legend>Цена договора</legend>
                                 <div >
-                                    
-                                <div id="reest-add-input-price" class="inner-block-add">
-                                    <label for="reest-add-price_agreed" class="label-style" style="text-align: left;">Согласованная:</label>
-                                    <input class="input_block2" type="text"  name="reest-add-price_agreed" id="reest-add-price_agreed" placeholder="Цена согласованная"/>
-                                    <label for="reest-add-price_concluded" class="label-style" style="text-align: left;">Заключенная:</label>
-                                    <input class="input_block2" type="text"  name="reest-add-price_concluded" id="reest-add-price_concluded" placeholder="Цена заключенная"/>
-                                </div>
-                                    
-                                <div id="reest-add-select-price" class="inner-block-add" style="display: none;">
-                                    <label for="reest-add-price_agreed" class="label-style" style="text-align: left;">Согласованная:</label>
-                                    <select id="reest-add-price_agreed" class="input_block2">
-                                        <option>Выберите цену</option>
-                                    </select>
-                                </div>
-
+                                    <div id="reest-add-input-price" class="inner-block-add">
+                                        <label for="reest-add-price_agreed" class="label-style" style="text-align: left;">Согласованная:</label>
+                                        <input class="input_block2" type="text"  name="reest-add-price_agreed" id="reest-add-price_agreed" placeholder="Цена согласованная"/>
+                                        <label for="reest-add-price_concluded" class="label-style" style="text-align: left;">Заключенная:</label>
+                                        <input class="input_block2" type="text"  name="reest-add-price_concluded" id="reest-add-price_concluded" placeholder="Цена заключенная"/>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>
@@ -111,7 +99,7 @@
                         <div class="grid2">
                         
                         <div>
-                            <fieldset>
+                            <fieldset style="height: 99.005px">
                                 <legend>КОСГУ</legend>
                                 <div id="reest-add-input-kosgu" class="inner-block-add">
                                     <label for="reest-add-num_kosgu" class="label-style" style="text-align: left;">КОСГУ:</label>
