@@ -11,7 +11,24 @@
         <script src="./js/fill_table/fill_users.js"></script>
         
         <div class="inner_content">
+            <div id="form_box">
+                <div class="btn_box">
+                    <div id="btn_add">
+                        <button id="btn_ad" class="submit1" >Добавить пользователя</button>
+                    </div>
+
+                    <div id="btn_edit">
+                        <button id="btn_ed" class="submit1" >Редактировать данные</button>
+                    </div>
+
+                    <div id="btn_delete">
+                        <button id="btn_del" class="submit1" >Удалить пользователя</button>
+                    </div>
+                </div><br/><!-- END DIV BTN BOX -->
+
+            </div><!-- END DIV FORM BOX -->
             
+            <h2>Пользователи</h2>
         </div><!-- END DIV INNER CONTENT -->
 
         <div class="table_box" style="overflow-x: hidden;">
