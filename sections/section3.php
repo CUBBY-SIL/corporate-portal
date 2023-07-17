@@ -32,6 +32,8 @@
                     <h2 id="h_add" style="display:none;">Добавить запись</h2>
                     <h2 id="h_edit" style="display:none;">Редактировать запись</h2>
 
+                    <br>
+
                         <form  name="form_add_edit_breach" id="form_add_edit_breach">
 
                             <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
