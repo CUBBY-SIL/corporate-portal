@@ -326,7 +326,11 @@
                         name="submit1" value="Добавить запись"
                         onclick="return validate_form_add_reestr( );"
                         />
-                        <input class="submit1" id="btn_sub_edit" style="margin:0 auto; margin-top:25px; display:none;"  type="button" name="submit1" value="Редактировать запись"/>
+                        <input class="submit1" id="btn_sub_edit" 
+                        style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                        name="submit1" value="Редактировать запись"
+                        onclick="return validate_form_add_reestr( );"
+                        />
 
                     </form><br/>
                 </div><!-- END DIV FORM ADD EDIT -->
