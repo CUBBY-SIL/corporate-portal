@@ -8,7 +8,7 @@
         
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
-        
+        <script src="./js/show_hide_form.js"></script>
         
         <div class="inner_content">
             <div id="form_box">
