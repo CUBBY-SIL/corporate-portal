@@ -26,7 +26,63 @@
                     </div>
                 </div><br/><!-- END DIV BTN BOX -->
 
-                
+                <div id="form_add_edit" style="display:none;">
+
+                    <h2 id="h_add" style="display:none;">Добавить запись</h2>
+                    <h2 id="h_edit" style="display:none;">Редактировать запись</h2>
+
+                        <form name="form1_add_edit_fbu" id="form1_add_edit_fbu">
+                            
+                            <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
+                                <label for="reestr-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
+                                <input class="input_block" type="text" name="reestr-edit-num_row" id="reestr-edit-num_row" placeholder="Введите номер" />
+                            </div>
+
+                            <div class="block-add">
+                                <div class="inner-block-add">
+                                    <label for="fbu-add-date" class="label-style">Дата</label>
+                                    <input class="input_block" type="date" name="fbu-add-date" id="fbu-add-date"/>
+                                </div>
+                            
+                                <div class="inner-block-add">
+                                    <label for="fbu-add-num-contr" class="label-style">№ контракта</label>
+                                    <input class="input_block" type="text"  name="fbu-add-num-contr" id="fbu-add-num-contr" placeholder="Введите номер контракта"/>
+                                </div>
+                                
+                                <div class="inner-block-add">
+                                    <label for="fbu-add-name" class="label-style">Наименование</label>
+                                    <input class="input_block" type="text"  name="fbu-add-name" id="fbu-add-name" placeholder="Введите наименование"/>
+                                </div>
+                                
+                                <div class="inner-block-add">
+                                    <label for="fbu-add-fact" class="label-style">Факт</label>
+                                    <input class="input_block" type="text"  name="fbu-add-fact" id="fbu-add-fact" placeholder="Введите факт"/>
+                                </div>
+                            </div><!-- END DIV BLOCK ADD -->
+                            
+                            <input class="submit1" id="btn_sub_add" 
+                            style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                            name="submit1" value="Добавить запись"
+                            onclick="return validate_form_add_fbu( );"
+                            />
+                            <input class="submit1" id="btn_sub_edit" 
+                            style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                            name="submit1" value="Редактировать запись"
+                            onclick="return validate_form_add_fbu( );"
+                            />
+
+                        </form>
+                </div><!--END FORM ADD EDIT -->
+
+                <div id="form_delete" style="display:none;">
+                    <h2>Удалить запись</h2><br/>
+
+                    <form name="form3" id="form1" style="display:block">
+                        <input class="input_block" type="text"   name="fbu-delete" id="fbu-delete" placeholder="Введите номер строки" />
+                        <br/><br/>
+                        <input class="submit1" type="button" onclick="return validate_form_delete_fbu( );" name="submit1" value="Удалить запись"/>
+                    </form><br/>
+                </div><!-- END DIV FORM DELETE --> 
 
             </div><!-- END DIV FORM BOX --> 
 
