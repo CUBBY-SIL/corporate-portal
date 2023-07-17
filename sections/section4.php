@@ -11,9 +11,10 @@
         
         <div class="inner_content">
             
+            <h2>Чеки</h2>
         </div>
 
-        <div class="table_box">
+        <div class="table_box" style="overflow-x: hidden;">
 
             <table style="border: 1px solid #eee;table-layout: fixed;width: 100%;margin-bottom: 20px;" id="tbl_rcps" name="tbl_rcps">
                 <thead>            
