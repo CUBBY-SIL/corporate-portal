@@ -8,6 +8,7 @@
         
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
+        <script src="./js/show_hide_form.js"></script>
         
         <div class="inner_content">
             <div id="form_box">
@@ -25,6 +26,94 @@
                     </div>
                 </div><br/><!-- END DIV BTN BOX -->
 
+                <div id="form_add_edit" style="display:none;">
+
+                    <h2 id="h_add" style="display:none;">Добавить запись</h2>
+                    <h2 id="h_edit" style="display:none;">Редактировать запись</h2>
+
+                        <form  name="form_add_edit_breach" id="form_add_edit_breach">
+
+                            <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
+                                <label for="reestr-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
+                                <input class="input_block" type="text" name="reestr-edit-num_row" id="reestr-edit-num_row" placeholder="Введите номер" />
+                            </div>
+                            
+                            <div class="block-add">
+                            
+                            <div class="inner-block-add">
+                                <label for="breach-num_contract" class="label-style">№ контракта:</label>
+                                <input class="input_block" type="text" name="breach-num_contract" id="breach-num_contract" placeholder="Номер контракта" />
+                            </div>
+                            
+                            <div class="inner-block-add">
+                                <label for="breach_num_pp" class="label-style">№ п/п:</label>
+                                <input class="input_block" type="text"  name="breach_num_pp" id="breach_num_pp" placeholder="Номер п/п"/>
+                            </div>
+                                
+                            </div>
+<!-----------------------------------------------------------------------------------------------------------------------------------------------------> 
+                            <fieldset style="margin-bottom: 25px;">
+                                <legend>Даты</legend>
+                                
+                                <div class="grid2" style="grid-template-columns: 650px 650px; margin-bottom: 20px;">
+                                    
+                                    <div id="breach-add-input-date-pp" class="inner-block-add" style="grid-template-columns: 0.5fr 1fr;">
+                                        <label for="breach-add-date-pp" class="label-style" style="text-align: left;">Дата п/п:</label>
+                                        <input style="width:330px;" class="input_block" type="date"  name="breach-add-date-pp" id="breach-add-date-pp"/>
+                                    </div>
+                                
+                                    <div id="breach-add-input-date-provide-pp" class="inner-block-add" style="grid-template-columns: 0.7fr 1fr;">
+                                        <label for="breach-add-date-provide-pp" class="label-style" style="text-align: left;">Дата предоставления п/п:</label>
+                                        <input style="width:330px;" class="input_block" type="date"  name="breach-add-date-provide-pp" id="breach-add-date-provide-pp"/>
+                                    </div>
+                                    
+                                    <div id="breach-add-input-date-doc" class="inner-block-add" style="grid-template-columns: 0.5fr 1fr;">
+                                        <label for="breach-add-date-doc" class="label-style" style="text-align: left;">Дата документа о:</label>
+                                        <input style="width:330px;" class="input_block" type="date"  name="breach-add-date-doc" id="breach-add-date-doc"/>
+                                    </div>
+                                    
+                                    <div id="breach-add-input-date-accept" class="inner-block-add" style="grid-template-columns: 0.7fr 1fr;">
+                                        <label for="breach-add-date-accept" class="label-style" style="text-align: left;">Дата приемки:</label>
+                                        <input style="width:330px;" class="input_block" type="date"  name="breach-add-date-accept" id="breach-add-date-accept"/>
+                                    </div>
+                                    
+                                    <div id="breach-add-input-date-provision" class="inner-block-add" style="grid-template-columns: 0.5fr 1fr;">
+                                        <label for="breach-add-date-provision" class="label-style" style="text-align: left;">Дата предоставления:</label>
+                                        <input style="width:330px;" class="input_block" type="date"  name="breach-add-date-provision" id="breach-add-date-provision"/>
+                                    </div>
+                                
+                                </div>
+                            </fieldset>                                                
+  <!----------------------------------------------------------------------------------------------------------------------------------------------------->
+                            <div class="block-add">  
+                                <div class="inner-block-add">
+                                    <label for="breach-add-comment" class="label-style">Примечание:</label>
+                                    <textarea class="txt_area_style" name="breach-add-comment" id="breach-add-comment" placeholder="Введите примечание"></textarea>
+                                </div>
+                            </div>
+
+                            <input class="submit1" id="btn_sub_add" 
+                            style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                            name="submit1" value="Добавить запись"
+                            onclick="return validate_form_add_breach( );"
+                            />
+                            <input class="submit1" id="btn_sub_edit" 
+                            style="margin:0 auto; margin-top:25px; display:none;"  type="button" 
+                            name="submit1" value="Редактировать запись"
+                            onclick="return validate_form_add_breach( );"
+                            />
+                        </form><br/>
+                </div><!-- END DIV FORM ADD EDIT -->
+
+                <div id="form_delete" style="display:none;">
+                    <h2>Удалить запись</h2><br/>
+
+                    <form name="form3" method="post" action="./php/delete_categories.php" id="form1" style="display:block" onclick="return validate_form_delete_breach ( );">
+                        <input class="input_block" type="text"   name="breach-delete" id="breach-delete" placeholder="Введите номер строки" />
+                        <br/><br/>
+                        <input class="submit1" type="submit" name="submit1" value="Удалить"/>
+                    </form><br/>
+                </div><!-- END DIV FORM DELETE -->
             </div><!-- END DIV FORM BOX -->  
             
             <?  
