@@ -26,7 +26,15 @@
                     </div>
                 </div><br/><!-- END DIV BTN BOX -->
 
-            </div>    
+            </div>
+            
+            <?  
+            if ($_SESSION['name'] == ''){
+                echo "<script>
+                        document.getElementById('form_box').style.display='none';  
+                    </script>";    
+            }
+            ?>
 
             <h2>Извещения</h2>
         </div><!-- END DIV INNER CONTENT -->
