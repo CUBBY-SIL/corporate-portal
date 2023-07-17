@@ -10,7 +10,24 @@
         <script src="./js/jquery.tablesorter.js"></script>
         
         <div class="inner_content">
-            
+            <div class="form_box">
+                <div class="btn_box">
+                    <div id="btn_add">
+                        <button id="btn_ad" class="submit1" >Добавить запись</button>
+                    </div>
+
+                    <div id="btn_edit">
+                        <button id="btn_ed" class="submit1" >Редактировать запись</button>
+                    </div>
+
+                    <div id="btn_delete">
+                        <button id="btn_del" class="submit1" >Удалить запись</button>
+                    </div>
+                </div><br/><!-- END DIV BTN BOX -->
+
+            </div>    
+
+            <h2>Нарушения</h2>
         </div>
 
         <div class="table_box" style="overflow-x: hidden;">
