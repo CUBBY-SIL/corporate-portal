@@ -10,7 +10,7 @@
         <script src="./js/jquery.tablesorter.js"></script>
         
         <div class="inner_content">
-            <div class="form_box">
+            <div id="form_box">
                 <div class="btn_box">
                     <div id="btn_add">
                         <button id="btn_ad" class="submit1" >Добавить запись</button>
@@ -25,7 +25,15 @@
                     </div>
                 </div><br/><!-- END DIV BTN BOX -->
 
-            </div>    
+            </div><!-- END DIV FORM BOX -->  
+            
+            <?  
+            if ($_SESSION['name'] == ''){
+                echo "<script>
+                        document.getElementById('form_box').style.display='none';  
+                    </script>";    
+            }
+            ?>
 
             <h2>Нарушения</h2>
         </div>
