@@ -8,6 +8,7 @@
         
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
+        <script src="./js/validate/validate_receipts.js"></script>
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_table/fill_receipts.js"></script>
         
@@ -37,8 +38,8 @@
                         <form name="form1" id="form_add_edit_receipts">
                         
                             <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
-                                <label for="reestr-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
-                                <input class="input_block" type="text" name="reestr-edit-num_row" id="reestr-edit-num_row" placeholder="Введите номер" />
+                                <label for="receipts-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
+                                <input class="input_block" type="text" name="receipts-edit-num_row" id="receipts-edit-num_row" placeholder="Введите номер" />
                             </div>
 
                             <div class="grid2">
