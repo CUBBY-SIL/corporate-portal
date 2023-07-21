@@ -13,6 +13,7 @@
         <script src="./js/fill_select/fill_kvr_receipts.js"></script>
         <script src="./js/fill_select/fill_kosgu.js"></script>
         <script src="./js/fill_select/fill_finance.js"></script>
+        <script src="./js/fill_select/fill_branch.js"></script>
         <script src="./js/fill_table/fill_receipts.js"></script>
         
         <div class="inner_content">
@@ -140,7 +141,7 @@
                                     <div id="receipts-add-check-sel-nfin">
                                         <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label>
                                         <input type="checkbox" id="receipts-add-check-select-nfin-checkbox" 
-                                                 onclick="$('#receipts-add-check-select-nfin-checkbox').prop('checked', false);
+                                        onclick="$('#receipts-add-check-input-nfin-checkbox').prop('checked', false);
                                                  document.getElementById('receipts-add-input-nfin').style.display='none';
                                                  document.getElementById('receipts-add-select-nfin').style.display='grid';
                                                  document.getElementById('receipts-add-check-sel-nfin').style.display='none';
@@ -149,8 +150,8 @@
                                     
                                     <div id="receipts-add-check-add-nfin" style="display: none;">
                                         <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label>
-                                        <input type="checkbox" id="receipts-add-check-select-nfin-checkbox" 
-                                                 onclick="$('#receipts-add-check-select-nfin-checkbox').prop('checked', false);
+                                        <input type="checkbox" id="receipts-add-check-input-nfin-checkbox" 
+                                        onclick="$('#receipts-add-check-select-nfin-checkbox').prop('checked', false);
                                                  document.getElementById('receipts-add-input-nfin').style.display='grid';
                                                  document.getElementById('receipts-add-select-nfin').style.display='none';
                                                  document.getElementById('receipts-add-check-sel-nfin').style.display='block';
@@ -158,7 +159,7 @@
                                     </div>
                                 </fieldset>
                             </div>
-                                
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
                             <div>
                                 <fieldset>
                                     <legend>Филиал</legend>
@@ -167,49 +168,30 @@
                                         <input class="input_block2" type="text"  name="receipts-add-office" id="receipts-add-office" placeholder="Наименование"/>
                                     </div>
                                     <div id="receipts-add-select-office" style="display: none;" class="inner-block-add">
-                                        <label for="receipts-add-office" class="label-style" style="text-align: left;">Филиал:</label>
-                                        <select id="receipts-add-office" class="input_block2">
-                                            <option>Выберите филиал</option>
-                                        </select>
-                                    
-                                    <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'OFFICE.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#receipts-add-office');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>
-                                        
+                                        <label for="sel_branch" class="label-style" style="text-align: left;">Филиал:</label>
+                                        <select id="sel_branch" class="input_block2"></select>
                                     </div>
+
                                     <br>
+
                                     <div id="receipts-add-check-sel-office">
-                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="receipts-add-check-select-office" 
-                                        onclick="document.getElementById('receipts-add-input-office').style.display='none';
-                                                 document.getElementById('receipts-add-select-office').style.display='grid';
-                                                 document.getElementById('receipts-add-check-sel-office').style.display='none';
-                                                 document.getElementById('receipts-add-check-add-office').style.display='block';">
+                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                        <input type="checkbox" id="receipts-add-check-select-office-checkbox" 
+                                        onclick="$('#receipts-add-check-input-office-checkbox').prop('checked', false);
+                                                document.getElementById('receipts-add-input-office').style.display='none';
+                                                document.getElementById('receipts-add-select-office').style.display='grid';
+                                                document.getElementById('receipts-add-check-sel-office').style.display='none';
+                                                document.getElementById('receipts-add-check-add-office').style.display='block';">
                                     </div>
                                         
                                     <div id="receipts-add-check-add-office" style="display: none;">
-                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="receipts-add-check-select-office" 
-                                        onclick="document.getElementById('receipts-add-input-office').style.display='grid';
-                                                 document.getElementById('receipts-add-select-office').style.display='none';
-                                                 document.getElementById('receipts-add-check-sel-office').style.display='block';
-                                                 document.getElementById('receipts-add-check-add-office').style.display='none';">
+                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label>
+                                        <input type="checkbox" id="receipts-add-check-input-office-checkbox" 
+                                        onclick="$('#receipts-add-check-select-office-checkbox').prop('checked', false);
+                                                document.getElementById('receipts-add-input-office').style.display='grid';
+                                                document.getElementById('receipts-add-select-office').style.display='none';
+                                                document.getElementById('receipts-add-check-sel-office').style.display='block';
+                                                document.getElementById('receipts-add-check-add-office').style.display='none';">
                                     </div>
                                 </fieldset>
                             </div>
