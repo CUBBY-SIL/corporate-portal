@@ -8,6 +8,7 @@
         
         <script src="./js/jquery-3.6.1.js"></script>
         <script src="./js/jquery.tablesorter.js"></script>
+        <script src="./js/validate/validate_breach.js"></script>
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_table/fill_breach.js"></script>
         
@@ -37,8 +38,8 @@
                         <form  name="form_add_edit_breach" id="form_add_edit_breach">
 
                             <div id="edit_num_row" class="inner-block-add" style="margin-bottom:25px; display:none;">
-                                <label for="reestr-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
-                                <input class="input_block" type="text" name="reestr-edit-num_row" id="reestr-edit-num_row" placeholder="Введите номер" />
+                                <label for="breach-edit-num_row" class="label-style" style="text-align: left; margin-left:8px;">ID Записи:</label>
+                                <input class="input_block" type="text" name="breach-edit-num_row" id="breach-edit-num_row" placeholder="Введите номер" />
                             </div>
                             
                             <div class="block-add">
@@ -111,7 +112,7 @@
                 <div id="form_delete" style="display:none;">
                     <h2>Удалить запись</h2><br/>
 
-                    <form name="form3" method="post" action="./php/delete_categories.php" id="form1" style="display:block" onclick="return validate_form_delete_breach ( );">
+                    <form name="form_breach_delete" id="form_breach_delete" style="display:block" onclick="return validate_form_delete_breach ( );">
                         <input class="input_block" type="text"   name="breach-delete" id="breach-delete" placeholder="Введите номер строки" />
                         <br/><br/>
                         <input class="submit1" type="submit" name="submit1" value="Удалить"/>
