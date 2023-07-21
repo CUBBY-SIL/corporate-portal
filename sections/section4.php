@@ -10,6 +10,7 @@
         <script src="./js/jquery.tablesorter.js"></script>
         <script src="./js/validate/validate_receipts.js"></script>
         <script src="./js/show_hide_form.js"></script>
+        <script src="./js/fill_select/fill_kvr_receipts.js"></script>
         <script src="./js/fill_table/fill_receipts.js"></script>
         
         <div class="inner_content">
@@ -43,7 +44,7 @@
                             </div>
 
                             <div class="grid2">
-                             
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
                             <div>
                                 <fieldset>
                                     <legend>КВР</legend>
@@ -53,52 +54,33 @@
                                     </div>
                                     <div id="receipts-add-select-kvr" style="display: none;" class="inner-block-add">
                                         <label for="receipts-add-kvr" class="label-style">КВР:</label>
-                                        <select id="receipts-add-kvr" class="input_block2">
-                                            <option>Выберите КВР</option>
-                                        </select>
-                                        
-                                    <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'KVR.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#receipts-add-kvr');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>
-                                        
+                                        <select id="receipts-add-sel_kvr" class="input_block2"></select>
                                     </div>
+
                                     <br>
+
                                     <div id="receipts-add-check-sel-kvr">
-                                        <label for="receipts-add-check-select-kvr" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="receipts-add-check-select-kvr" 
-                                                 onclick="document.getElementById('receipts-add-input-kvr').style.display='none';
+                                        <label for="receipts-add-check-select-kvr" class="label-style">Выбрать из имеющихся</label>
+                                        <input type="checkbox" id="receipts-add-check-select-kvr-checkbox" 
+                                                 onclick="$('#receipts-add-check-kvr-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-kvr').style.display='none';
                                                  document.getElementById('receipts-add-select-kvr').style.display='grid';
                                                  document.getElementById('receipts-add-check-sel-kvr').style.display='none';
                                                  document.getElementById('receipts-add-check-add-kvr').style.display='block';"><br>
                                     </div>
                                         
                                     <div id="receipts-add-check-add-kvr" style="display: none;">
-                                        <label for="receipts-add-check-adding-kvr" class="label-style">Добавить новое значение</label><input type="checkbox" id="receipts-add-check-adding-kvr" 
-                                                 onclick="document.getElementById('receipts-add-input-kvr').style.display='grid';
+                                        <label for="receipts-add-check-adding-kvr" class="label-style">Добавить новое значение</label>
+                                        <input type="checkbox" id="receipts-add-check-kvr-checkbox" 
+                                                 onclick="$('#receipts-add-check-select-kvr-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-kvr').style.display='grid';
                                                  document.getElementById('receipts-add-select-kvr').style.display='none';
                                                  document.getElementById('receipts-add-check-sel-kvr').style.display='block';
                                                  document.getElementById('receipts-add-check-add-kvr').style.display='none';">
                                     </div>
                                 </fieldset>
                             </div>
-                                
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
                             <div>
                                 <fieldset>
                                     <legend>КОСГУ</legend>
