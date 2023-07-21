@@ -12,6 +12,7 @@
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_select/fill_kvr_receipts.js"></script>
         <script src="./js/fill_select/fill_kosgu.js"></script>
+        <script src="./js/fill_select/fill_finance.js"></script>
         <script src="./js/fill_table/fill_receipts.js"></script>
         
         <div class="inner_content">
@@ -130,46 +131,27 @@
                                         <input class="input_block2" type="text"  name="receipts-add-nfin" id="receipts-add-nfin" placeholder="Наименование"/>
                                     </div>
                                     <div id="receipts-add-select-nfin" style="display: none;" class="inner-block-add">
-                                        <label for="receipts-add-nfin" class="label-style" style="margin-top: -5px;">Источник финансирования:</label>
-                                        <select id="receipts-add-nfin" class="input_block2">
-                                            <option>Выберите источник финансирования</option>
-                                        </select>
-                                        
-                                    <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'NFIN.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#receipts-add-nfin');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>
-                                        
+                                        <label for="sel_fin" class="label-style" style="margin-top: -5px;">Источник финансирования:</label>
+                                        <select id="sel_fin" class="input_block2"></select>
                                     </div>
+
                                     <br>
+
                                     <div id="receipts-add-check-sel-nfin">
-                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="receipts-add-check-select-nfin" 
-                                                 onclick="document.getElementById('receipts-add-input-nfin').style.display='none';
+                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                        <input type="checkbox" id="receipts-add-check-select-nfin-checkbox" 
+                                                 onclick="$('#receipts-add-check-select-nfin-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-nfin').style.display='none';
                                                  document.getElementById('receipts-add-select-nfin').style.display='grid';
                                                  document.getElementById('receipts-add-check-sel-nfin').style.display='none';
                                                  document.getElementById('receipts-add-check-add-nfin').style.display='block';">
                                     </div>
                                     
                                     <div id="receipts-add-check-add-nfin" style="display: none;">
-                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="receipts-add-check-select-nfin" 
-                                                 onclick="document.getElementById('receipts-add-input-nfin').style.display='grid';
+                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label>
+                                        <input type="checkbox" id="receipts-add-check-select-nfin-checkbox" 
+                                                 onclick="$('#receipts-add-check-select-nfin-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-nfin').style.display='grid';
                                                  document.getElementById('receipts-add-select-nfin').style.display='none';
                                                  document.getElementById('receipts-add-check-sel-nfin').style.display='block';
                                                  document.getElementById('receipts-add-check-add-nfin').style.display='none';">
