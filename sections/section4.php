@@ -11,6 +11,7 @@
         <script src="./js/validate/validate_receipts.js"></script>
         <script src="./js/show_hide_form.js"></script>
         <script src="./js/fill_select/fill_kvr_receipts.js"></script>
+        <script src="./js/fill_select/fill_kosgu.js"></script>
         <script src="./js/fill_table/fill_receipts.js"></script>
         
         <div class="inner_content">
@@ -90,45 +91,26 @@
                                     </div>
                                     <div id="receipts-add-select-kosgu" style="display: none;" class="inner-block-add">
                                         <label for="receipts-add-kosgu" class="label-style" style="text-align: left;">КОСГУ:</label>
-                                        <select class="input_block2">
-                                            <option>Выберите КОСГУ</option>
-                                        </select>
-                                        
-                                    <script>
-                                    // Загрузка данных из базы данных и заполнение выпадающего списка
-                                    $(document).ready(function() {
-                                        $.ajax({
-                                            url: 'KOSGU.php',
-                                            method: 'GET',
-                                            dataType: 'json',
-                                            success: function(data) {
-                                                var dropdown = $('#receipts-add-kosgu');
-                                                dropdown.empty();
-
-                                                $.each(data, function(index, value) {
-                                                    dropdown.append($('<option></option>').attr('value', value.id).text(value.name));
-                                                });
-                                            },
-                                            error: function(xhr, status, error) {
-                                            console.log(xhr.responseText);
-                                            }
-                                        });
-                                    });
-                                    </script>
-                                        
+                                        <select class="input_block2" id="sel_kosgu"></select>  
                                     </div>
+
                                     <br>
+
                                     <div id="receipts-add-check-sel-kosgu">
-                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label><input type="checkbox" id="receipts-add-check-select-kosgu" 
-                                                 onclick="document.getElementById('receipts-add-input-kosgu').style.display='none';
+                                        <label for="receipts-add-check-select" class="label-style">Выбрать из имеющихся</label>
+                                        <input type="checkbox" id="receipts-add-check-select-kosgu-checkbox" 
+                                                 onclick="$('#receipts-add-check-input-kosgu-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-kosgu').style.display='none';
                                                  document.getElementById('receipts-add-select-kosgu').style.display='grid';
                                                  document.getElementById('receipts-add-check-sel-kosgu').style.display='none';
                                                  document.getElementById('receipts-add-check-add-kosgu').style.display='block';">
                                     </div>
                                         
                                     <div id="receipts-add-check-add-kosgu" style="display: none;">
-                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label><input type="checkbox" id="receipts-add-check-select-kosgu" 
-                                                 onclick="document.getElementById('receipts-add-input-kosgu').style.display='grid'; 
+                                        <label for="receipts-add-check-adding" class="label-style">Добавить новое значение</label>
+                                        <input type="checkbox" id="receipts-add-check-input-kosgu-checkbox" 
+                                                 onclick="$('#receipts-add-check-select-kosgu-checkbox').prop('checked', false);
+                                                 document.getElementById('receipts-add-input-kosgu').style.display='grid'; 
                                                  document.getElementById('receipts-add-select-kosgu').style.display='none';
                                                  document.getElementById('receipts-add-check-sel-kosgu').style.display='block';
                                                  document.getElementById('receipts-add-check-add-kosgu').style.display='none';">
